@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Panel</title>
-    <link rel="stylesheet" href="assets/css/adminlte.min.css">
-</head>
-<body>
-    <nav>
-        <a href="index.php">Dashboard</a> |
-        <a href="logout.php">Logout</a>
-    </nav>
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+    </ul>
+</nav>
