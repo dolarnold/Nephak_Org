@@ -39,6 +39,20 @@ checkLogin();
                                 </a>
                             </div>
                         </div>
+                        <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>Impact Stories</h3>
+                                    <p>Manage Impact Story section</p>
+                                </div>
+                                <a href="../sections/add_impact_story.php" class="small-box-footer">
+                                    Manage <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
                         <!-- Add similar boxes for other sections -->
                     </div>
                 </div>

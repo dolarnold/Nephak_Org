@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,25 +32,73 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src ="images/redribbon.png"alt ="NEPHAK Hero Image" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="text-centre">
+        <div class="hero-content">
             <h1>NEPHAK</h1>
             <h2>Empowering People: Leveraging the Lived Experience</h2>
             <p>Join NEPHAK in the fight against HIV/AIDS in Kenya</p>
             <a href="#" class="btn">About Us</a>
         </div>
-        </div>
     </section>
-    <section class="relative h-screen">
-        <img src="images/redribbon.png" alt="NEPHAK Hero Image" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-6xl text-white font-bold mb-4">NEPHAK <br> Empowering People: Leveraging the Lived Experience</h1>
-                <p class="text-xl md:text-2xl text-white mb-8">Join NEPHAK in the fight against HIV/AIDS in Kenya</p>
-                <a href="/about_us" class="btn bg-[#00A8E1] btn-lg">About Us</a>
-            </div>
+
+   <!-- Our Strategy Section -->
+<!-- Our Strategy Section -->
+<section class="strategy-section">
+    <div class="strategy-container">
+        <h2 class="strategy-title">Our Strategy</h2>
+        
+        <div class="strategy-content">
+            <p class="strategy-description">
+                Leveraging the ‘Lived Experience’ to deliver on the sustained improvement of the health and well-being of communities and contribute to the 2030 Sustainable Development Agenda in Kenya.
+            </p>
+            <button id="toggle-strategy-btn" class="strategy-button">
+                Learn More
+            </button>
         </div>
-    </section>
+        
+        <!-- Dropdown Content -->
+        <div id="strategy-details" class="strategy-details hidden">
+            <h3 class="strategy-subtitle">Strategic Goal</h3>
+            <p class="strategy-text">
+                Sustained Improvement of Health and Wellbeing of people living with, affected by and, at risk of HIV/TR and other conditions of community health concern.
+            </p>
+            
+            <h3 class="strategy-subtitle">Strategic Directions</h3>
+            <ol class="strategy-list">
+                <li>Undertake Advocacy and Communication for Improved Health Policy and Programming</li>
+                <li>Undertake Institutional Strengthening for Improved Health & Wellbeing of Communities</li>
+                <li>Undertake evidence-based community health interventions for improved health outcomes</li>
+                <li>Strengthen Knowledge Management for Evidence-Based Interventions</li>
+                <li>Expand & Diversity Partnership & Resources for NEPHAK Operations and Programming at national, county and community</li>
+            </ol>
+            
+            <h3 class="strategy-subtitle">Result Areas</h3>
+            <ul class="strategy-list">
+                <li>Consolave Environment for Improved Health Policy and Programming</li>
+                <li>Strengthened institutions for Improved Health & Wellbeing of Communities</li>
+                <li>Implemented evidence-based community health interventions for improved health outcomes</li>
+                <li>Strengthened Knowledge Management for Evidence-Based Interventions</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<?php include 'footer.php'; ?>
 </body>
+
+
+<script>
+ // Toggle Dropdown Functionality
+const toggleButton = document.getElementById('toggle-strategy-btn');
+const strategyDetails = document.getElementById('strategy-details');
+
+toggleButton.addEventListener('click', () => {
+    if (strategyDetails.style.display === 'none' || strategyDetails.style.display === '') {
+        strategyDetails.style.display = 'block';
+        toggleButton.textContent = 'Hide Details';
+    } else {
+        strategyDetails.style.display = 'none';
+        toggleButton.textContent = 'Learn More';
+    }
+});
+</script>
 </html>
+
