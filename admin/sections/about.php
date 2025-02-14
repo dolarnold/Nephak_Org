@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'] ?? '';
     $content = $_POST['content'] ?? '';
     $file = $_FILES['file'] ?? null;
-    
+
     updateSection($conn, 'about', $title, $content, $file);
     header('Location: about.php?success=1');
     exit;
@@ -27,6 +27,16 @@ $about = $result->fetch_assoc();
     <title>About Us - Admin Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#content',
+            menubar: false,
+            plugins: 'advlist autolink lists link charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount',
+            toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
+            height: 300
+        });
+    </script>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -56,7 +66,7 @@ $about = $result->fetch_assoc();
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Content</label>
-                                    <textarea class="form-control" id="content" name="content" rows="10" required>
+                                    <textarea class="form-control" id="content" name="content" required>
                                         <?php echo htmlspecialchars($about['content'] ?? ''); ?>
                                     </textarea>
                                 </div>
